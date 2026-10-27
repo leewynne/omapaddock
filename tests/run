@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+node --test \
+  --experimental-test-coverage \
+  --test-coverage-include="$root/Model.js" \
+  --test-coverage-lines=95 \
+  --test-coverage-functions=95 \
+  --test-coverage-branches=80 \
+  "$root/tests"/*.test.js
+
+if command -v omarchy-plugin-validate >/dev/null; then
+  omarchy-plugin-validate "$root"
+fi

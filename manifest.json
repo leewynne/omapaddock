@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "id": "leewynne.omapaddock",
+  "name": "OmaPaddock",
+  "version": "1.0.0",
+  "author": "leewynne",
+  "license": "MIT",
+  "description": "The big races in your Omarchy bar: Formula 1 (F1), Le Mans and the WEC, MotoGP, IndyCar and NASCAR. A countdown to the next session, and a popup with every race weekend's schedule in your time zone, plus results.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "OmaPaddock",
+    "description": "Countdown to the next F1 session, with every race weekend's schedule in your time zone and tabs for the WEC and Le Mans, MotoGP, IndyCar and NASCAR.",
+    "category": "Info",
+    "aliases": [
+      "f1",
+      "formula1",
+      "formula-one",
+      "racing",
+      "motorsport",
+      "le-mans",
+      "wec",
+      "endurance",
+      "motogp",
+      "indycar",
+      "indy500",
+      "nascar",
+      "daytona",
+      "grand-prix"
+    ],
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "label": "race",
+      "follow": "f1",
+      "clock": "locale",
+      "f1": true,
+      "wec": true,
+      "motogp": true,
+      "indycar": true,
+      "nascar": true,
+      "refreshMinutes": 30
+    },
+    "schema": [
+      {
+        "key": "label",
+        "type": "enum",
+        "label": "Bar label",
+        "options": [
+          "race",
+          "icon"
+        ],
+        "defaultValue": "race",
+        "description": "race: Mexico City GP · FP1 3d. icon: the chequered flag alone, filled with your theme's urgent colour while a session is live."
+      },
+      {
+        "key": "follow",
+        "type": "enum",
+        "label": "Bar follows",
+        "options": [
+          "f1",
+          "wec",
+          "motogp",
+          "indycar",
+          "nascar",
+          "any"
+        ],
+        "defaultValue": "f1",
+        "description": "Which series the bar counts down to. any: whichever shown series has the next session."
+      },
+      {
+        "key": "clock",
+        "type": "enum",
+        "label": "Session times",
+        "options": [
+          "locale",
+          "24h",
+          "12h"
+        ],
+        "defaultValue": "locale",
+        "description": "Times are always shown in your local time zone. locale follows the system's time format."
+      },
+      {
+        "key": "f1",
+        "type": "boolean",
+        "label": "Formula 1",
+        "defaultValue": true,
+        "description": "Show the F1 tab."
+      },
+      {
+        "key": "wec",
+        "type": "boolean",
+        "label": "WEC and Le Mans",
+        "defaultValue": true,
+        "description": "Show the World Endurance Championship tab, with the 24 Hours of Le Mans."
+      },
+      {
+        "key": "motogp",
+        "type": "boolean",
+        "label": "MotoGP",
+        "defaultValue": true,
+        "description": "Show the MotoGP tab."
+      },
+      {
+        "key": "indycar",
+        "type": "boolean",
+        "label": "IndyCar",
+        "defaultValue": true,
+        "description": "Show the IndyCar tab, with the Indianapolis 500."
+      },
+      {
+        "key": "nascar",
+        "type": "boolean",
+        "label": "NASCAR",
+        "defaultValue": true,
+        "description": "Show the NASCAR Cup Series tab, with the Daytona 500."
+      },
+      {
+        "key": "refreshMinutes",
+        "type": "integer",
+        "label": "Refresh interval (minutes)",
+        "min": 5,
+        "max": 240,
+        "step": 5,
+        "defaultValue": 30,
+        "description": "How often the F1, IndyCar and NASCAR schedules refresh: every 2 minutes during a session regardless. WEC and MotoGP calendars refresh every 6 hours."
+      }
+    ]
+  }
+}
