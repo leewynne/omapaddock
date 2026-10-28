@@ -29,7 +29,7 @@ Panel {
   property string wecDetailUrl: ""
   property int wecDetailHours: 6
 
-  readonly property string labelStyle: Model.labelStyle(String(setting("label", "race")))
+  readonly property string labelStyle: Model.labelStyle(String(setting("label", "icon")))
   readonly property string followed: Model.follow(String(setting("follow", "f1")))
   readonly property int refreshMinutes: Math.max(5, parseInt(setting("refreshMinutes", 30), 10) || 30)
   readonly property string timeFormat: Model.timeFormat(String(setting("clock", "locale")), Qt.locale().timeFormat(Locale.ShortFormat))

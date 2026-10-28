@@ -5,12 +5,12 @@ popup with every race weekend's schedule in your time zone. Switch to the
 World Endurance Championship and Le Mans, MotoGP, IndyCar or NASCAR, and step
 through every round with the arrows.
 
-- **Bar pill** with the race and the next session
-  (`Mexico City GP · FP1 3d`), turning to `LIVE` in the urgent colour while a
-  session is on. It follows F1 unless you pick another series, or `any` for
-  whichever is next. Short on bar space? Switch to the **icon** style: just
-  the chequered flag, which fills with your theme's urgent colour during a
-  session.
+- **A chequered flag in the bar** that fills with your theme's urgent colour
+  while a session is on; hover it for every series' next session. Want the
+  countdown in the bar too? Switch to the **race** style for the race and the
+  next session beside the flag (`Mexico City GP · FP1 3d`), turning to `LIVE`
+  during a session. The bar follows F1 unless you pick another series, or
+  `any` for whichever is next.
 - **Race weekend popup** with the circuit, broadcaster, round number and
   every session grouped by day, in your time zone.
 - **F1**: practice, sprint qualifying, sprint, qualifying and race, with
@@ -67,7 +67,7 @@ omarchy-shell leewynne.omapaddock refresh
 Change these from the bar settings, or with `omarchy bar set`:
 
 ```bash
-omarchy bar set leewynne.omapaddock label icon
+omarchy bar set leewynne.omapaddock label race
 omarchy bar set leewynne.omapaddock follow any
 omarchy bar set leewynne.omapaddock nascar false --json
 omarchy bar set leewynne.omapaddock clock 24h
@@ -76,7 +76,7 @@ omarchy bar set leewynne.omapaddock refreshMinutes 60 --json
 
 | Key | Values | Default |
 |---|---|---|
-| `label` | `race` (`Mexico City GP · FP1 3d`) or `icon` (the flag alone) | `race` |
+| `label` | `icon` (the flag alone) or `race` (the flag with `Mexico City GP · FP1 3d`) | `icon` |
 | `follow` | the series the bar counts down to: `f1`, `wec`, `motogp`, `indycar`, `nascar`, or `any` for whichever is next | `f1` |
 | `f1`, `wec`, `motogp`, `indycar`, `nascar` | `true`, or `false` to hide that series' tab | `true` |
 | `clock` | `locale`, `24h`, `12h` | `locale` |

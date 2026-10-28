@@ -25,7 +25,7 @@ var glyphs = {
 
 var series = ["f1", "wec", "motogp", "indycar", "nascar"]
 var follows = series.concat(["any"])
-var labelStyles = ["race", "icon"]
+var labelStyles = ["icon", "race"]
 
 var seriesInfo = {
   f1: { tab: "F1", name: "Formula 1", key: "f", source: "ESPN" },
@@ -66,7 +66,7 @@ function follow(value) {
 }
 
 function labelStyle(value) {
-  return value === "icon" ? "icon" : "race"
+  return value === "race" ? "race" : "icon"
 }
 
 // On/off settings arrive as booleans, or as "false" from `omarchy bar set`

@@ -113,8 +113,9 @@ test("settings fall back to their defaults", () => {
   assert.equal(Model.seriesId("dtm"), "f1")
   assert.equal(Model.follow("any"), "any")
   assert.equal(Model.follow(undefined), "f1")
-  assert.equal(Model.labelStyle("icon"), "icon")
-  assert.equal(Model.labelStyle("badge"), "race")
+  assert.equal(Model.labelStyle("race"), "race")
+  assert.equal(Model.labelStyle("badge"), "icon")
+  assert.equal(Model.labelStyle(undefined), "icon")
   assert.equal(Model.switchedOn(true), true)
   assert.equal(Model.switchedOn(undefined), true)
   assert.equal(Model.switchedOn(false), false)
@@ -133,6 +134,7 @@ test("the manifest's settings stay in step with the model", () => {
   const schema = Object.fromEntries(manifest.barWidget.schema.map(s => [s.key, s]))
   const defaults = manifest.barWidget.defaults
   assert.deepEqual(schema.label.options, Model.labelStyles)
+  assert.equal(defaults.label, "icon")
   assert.deepEqual(schema.follow.options, Model.follows)
   assert.equal(defaults.follow, "f1")
   Model.series.forEach(id => {

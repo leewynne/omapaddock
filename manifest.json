@@ -35,7 +35,7 @@
     "allowMultiple": false,
     "defaultSection": "right",
     "defaults": {
-      "label": "race",
+      "label": "icon",
       "follow": "f1",
       "clock": "locale",
       "f1": true,
@@ -51,11 +51,11 @@
         "type": "enum",
         "label": "Bar label",
         "options": [
-          "race",
-          "icon"
+          "icon",
+          "race"
         ],
-        "defaultValue": "race",
-        "description": "race: Mexico City GP · FP1 3d. icon: the chequered flag alone, filled with your theme's urgent colour while a session is live."
+        "defaultValue": "icon",
+        "description": "icon: the chequered flag alone, filled with your theme's urgent colour while a session is live. race: the flag with the race and next session beside it, like Mexico City GP · FP1 3d."
       },
       {
         "key": "follow",
