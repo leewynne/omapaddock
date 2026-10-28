@@ -1,9 +1,11 @@
 # OmaPaddock
 
-The big races in your Omarchy bar: a countdown to the next F1 session, and a
-popup with every race weekend's schedule in your time zone. Switch to the
-World Endurance Championship and Le Mans, MotoGP, IndyCar or NASCAR, and step
-through every round with the arrows.
+The big races in your Omarchy bar: a chequered flag that opens the next F1
+weekend, with every session in your time zone and a countdown to the next.
+Switch to the World Endurance Championship and Le Mans, MotoGP, IndyCar or
+NASCAR, and step through every round with the arrows.
+
+![OmaPaddock: the Mexico City Grand Prix weekend and the 6 Hours of Monza](preview.png)
 
 - **A chequered flag in the bar** that fills with your theme's urgent colour
   while a session is on; hover it for every series' next session. Want the
